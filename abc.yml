@@ -4,7 +4,7 @@ services:
   cont1:
     image: aslamm033/spring:latest
     ports:
-      - "8080:8080"
+      - "8083:8083"
 
   cont2:
     image: aslamm033/spring:latest
