@@ -1,31 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app: spring
-  name: spring-deploy
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: spring
-  template:
-    metadata:
-      labels:
-        app: spring
-    spec:
-      containers:
-      - name: cont1
-        image: aslamm033/spring:latest
-        ports:
-        - containerPort: 8080  # Port for container 1
+version: '3.8'
 
-      - name: cont2
-        image: aslamm033/spring:latest
-        ports:
-        - containerPort: 8181  # Port for container 2
+services:
+  cont1:
+    image: aslamm033/spring:latest
+    ports:
+      - "8080:8080"
 
-      - name: cont3
-        image: aslamm033/spring:latest
-        ports:
-        - containerPort: 8282  # Port for container 3
+  cont2:
+    image: aslamm033/spring:latest
+    ports:
+      - "8181:8181"
+
+  cont3:
+    image: aslamm033/spring:latest
+    ports:
+      - "8282:8282"
