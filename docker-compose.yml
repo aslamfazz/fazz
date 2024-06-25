@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  cont1:
+    image: aslamm033/spring:latest
+    ports:
+      - "8083:8083"
+
+  cont2:
+    image: aslamm033/spring:latest
+    ports:
+      - "8181:8181"
+
+  cont3:
+    image: aslamm033/spring:latest
+    ports:
+      - "8282:8282"
